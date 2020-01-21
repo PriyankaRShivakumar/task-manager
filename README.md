@@ -1,4 +1,4 @@
-IT IS A NODEJS Application
+It is a NODEJS Application
 
 The App is deployed to heroku and can be accessed in https://priyars-task-manager.herokuapp.com/
 

@@ -106,7 +106,7 @@ router.patch("/users/me", auth, async (req, res) => {
     allowedUpdates.includes(update)
   );
   if (!isValidOperation) {
-    return res.status(404).send({ error: "Invalid Updates!" });
+    return res.status(400).send({ error: "Invalid Updates!" });
   }
   try {
     updates.forEach(update => (req.user[update] = req.body[update])); //Here we use bracket notation, as we don't know which field of user is updated.

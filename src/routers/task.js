@@ -75,7 +75,7 @@ router.patch("/tasks/:id", auth, async (req, res) => {
     allowedUpdates.includes(update)
   );
   if (!isValidOperation) {
-    return res.status(404).send({ error: "Invalid Update!" });
+    return res.status(400).send({ error: "Invalid Update!" });
   }
   try {
     const task = await Task.findOne({
